@@ -9,11 +9,15 @@
     {% endfor %}
 {% else %} 
 {{ order }}
-<form method="post" enctype="multipart/form-data">
+<div style="text-align:center; margin-top: 2rem; background-color: burlywood;">
+    <h1>CSV Uploader Form</h1>
+    <form method="post" enctype="multipart/form-data">
 {% csrf_token %}
 <label >Upload Your CSV File</label>
 <input type="file" name="csv_file">
 <p>Accept only CSV Files</p>
 <button type="submit">Upload</button>
 </form>
+</div>
+
 {% endif %}   
