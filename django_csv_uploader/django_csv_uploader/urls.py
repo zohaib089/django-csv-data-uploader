@@ -4,5 +4,5 @@ from csvuploader.views import user_upload
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('upload/', user_upload, "user_upload"),
+    path('csv_upload/', user_upload, name="user_upload"),
 ]
